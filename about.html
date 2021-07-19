@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio Theme</title>
+	<meta name="description" content="An HTML portfolio theme built">
+	<meta name="author" content="Mina">
+	<meta name="viewport" content="width=device-width, inintial-scale=1"/>
+	<meta name="keywords" content="portfolio, theme, bootstrap, grid"> <!--site search keywords in web -->
+	<link rel="stylesheet" href="css/styles.css"/>
+	<!-- icons fontawesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+
+	<!-- cycle2 cdn contents delivery network: include jQuery & Cycle2 - Demo - Getting started -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/malsup/cycle2@2.1.6/build/jquery.cycle2.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="container clearfix">
+	<!--navbar-->
+		<h1 class="logo">
+			<a href="#">MinasPortfolio</a> 
+		</h1>
+		<nav>
+			<ul class="clearfix">
+				<li><a href="#">Home</a></li> <!--logo image replacement with text for better searching than just image without text-->
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">About us</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+
+	<!--main_content-->
+
+	<div class="banner">
+		<ul class="banner_list cycle-slideshow" 
+		data-cycle-fx="scrollHorz" 
+		data-cycle-timeout="0"
+		data-cycle-slides=".slide"
+		data-cycle-prev=".banner .prev"
+        data-cycle-next=".banner .next"
+		data-cycle-pager=".banner .custom-pager" 
+		>	<!--id: #, class:.-->
+
+			<li class="slide1 slide"> <!-- do not put the image as source, but as background for changing setting values for image-->
+				<h2 class="fancy_box red main_tt">Project Title</h2> <!--class="box setting box color font*/-->
+				<div class="slide_contents">
+					<p>This is small description for slide. </p>
+					<a href="" class="btn">See details</a> <!--giving class name, because there is also same style button in footer-->
+				</div>
+			</li> 
+			<li class="slide2 slide">
+				<h2 class="fancy_box main_tt">Project Title</h2>
+				<div class="slide_contents">
+					<p>This is small description for slide. 
+					</p>
+					<a href="" class="btn">See details</a>
+			</li>
+			<li class="slide3 slide">
+				<h2 class="fancy_box main_tt">Project Title</h2>
+				<div class="slide_contents">
+					<p>This is small description for slide. 
+					</p>
+					<a href="" class="btn">See details</a>
+			</li>
+		</ul>
+		<p class="banner_arrows"> <!-- need to have another tag for arrows. it can not be placed under ul, because under ul can be placed only li-->
+			<a href="#" class="prev"><i class="fas fa-chevron-left"></i></a>
+			<a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+		</p>
+		<p class="custom-pager"></p>
+	</div>
+
+
+	<footer>
+		<span class="envelope_icn fancy_box orange"><i class="fas fa-envelope"></i></span>
+		<div class="subscribe">
+			<i></i>
+			<p>Wanna see my latest photos? Enter your email below and I'll send you one email a month with the latest updates. </p>
+			<form action="#" method="POST"> <!--form has to have action with php eg. subscribe.php and method-->
+				<!--button setting
+				<button class="btn" type="submit">subscribe</button> //same class name like above for same style
+				<button class="btn" type="submit">
+					<img src="send.png" alt="">
+				</button>
+				<input type="image" src="send.png" class="btn"/>
+				-->
+				<input type="email" name="email" placeholder="Your email address"/>
+				<input type="submit" value="Subscribe" class="btn"/>
+			</form> 
+		</div>
+		<p class="social_network">
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+		</p>
+		<p class="copy">
+			&copy; 2021 portfolio theme.
+		</p>
+	</footer>
+</body>
+
+</html>
