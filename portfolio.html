@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio - Portfolio Theme</title>
+	<meta name="description" content="An HTML portfolio theme built">
+	<meta name="author" content="Mina">
+	<meta name="viewport" content="width=device-width, inintial-scale=1"/>
+	<meta name="keywords" content="portfolio, theme, bootstrap, grid"> <!--site search keywords in web -->
+	<link rel="stylesheet" href="css/styles.css"/>
+	<!-- icons fontawesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+
+	<!-- cycle2 cdn contents delivery network: include jQuery & Cycle2 - Demo - Getting started -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/malsup/cycle2@2.1.6/build/jquery.cycle2.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="container clearfix">
+	<!--navbar-->
+		<h1 class="logo">
+			<a href="index.html">MinasPortfolio</a> 
+		</h1>
+		<nav>
+			<ul class="clearfix">
+				<li><a href="index.html">Home</a></li> <!--logo image replacement with text for better searching than just image without text-->
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="about.html">About us</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+
+<div class="page_banner portfolio">
+	<h2 class="fancy_box grey main_tt">Portfolio</h2> 
+</div>
+	<!--main_content-->
+	<div class="main_content subpage container">
+		<h3 class="content_sub_tt">Current project</h3>
+		<h2 class="content_tt">Project name</h2>
+		<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+		<p>Lorem ipsum is typically a corrupted version of 'De finibus bonorum et malorum', a 1st century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin.</p>
+		<hr/> <!--line-->
+		<p class="portfolio_nav">
+			<a href="#" class="prev_project">&larr; previous project</a>
+			<a href="#" class="next_project">next project &rarr;</a>
+		</p>
+		</div>
+	<div class="banner portfolio_slider">
+		<div class="banner_list cycle-slideshow" 
+			data-cycle-fx="scrollHorz" 
+			data-cycle-timeout="0"
+			data-cycle-prev=".banner .prev"
+			data-cycle-next=".banner .next"
+			>	<!--id: #, class:.-->
+				<img src="images\slide-1-bg.jpg" alt="slide1"/>  <!-- unefficient with list sigmetic, if there is no contents to put in, so that imag-->
+				<img src="images\slide-2-bg.jpg" alt="slide2"/>
+				<img src="images\slide-3-bg.jpg" alt="slide3"/>
+		</div>
+			<p class="banner_arrows"> <!-- need to have another tag for arrows. it can not be placed under ul, because under ul can be placed only li-->
+				<a href="#" class="prev"><i class="fas fa-chevron-left"></i></a>
+				<a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+			</p>
+		</div>
+	
+
+
+	<footer>
+		<span class="envelope_icn fancy_box orange"><i class="fas fa-envelope"></i></span>
+		<div class="subscribe">
+			<i></i>
+			<p>Wanna see my latest photos? Enter your email below and I'll send you one email a month with the latest updates. </p>
+			<form action="#" method="POST"> <!--form has to have action with php eg. subscribe.php and method-->
+				<!--button setting
+				<button class="btn" type="submit">subscribe</button> //same class name like above for same style
+				<button class="btn" type="submit">
+					<img src="send.png" alt="">
+				</button>
+				<input type="image" src="send.png" class="btn"/>
+				-->
+				<input type="email" name="email" placeholder="Your email address"/>
+				<input type="submit" value="Subscribe" class="btn"/>
+			</form> 
+		</div>
+		<p class="social_network">
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+		</p>
+		<p class="copy">
+			&copy; 2021 portfolio theme.
+		</p>
+	</footer>
+</body>
+
+</html>

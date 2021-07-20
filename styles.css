@@ -13,7 +13,17 @@ font-family: 'Roboto', sans-serif;
 	margin:0 auto;
 	padding: 81px 0 108px;
 }
-
+hr {
+	border: 0;
+	/*border-top: 1px solid #eaeaea;*/
+	height: 1px; background: #eaeaea;
+	margin: 27px 0;
+}
+@media only screen and (max-width: 1300px) {
+	body {
+		width: 1300px;
+	  }
+  }
 /* TYPOGRAPHY */
 body {
 	font: normal 18px/27px 'Open Sans', sans-serif; /*style fontsize/line-heigth fontfamily*/
@@ -298,5 +308,67 @@ footer .copy {
 	color: #333538;
 }
 /*ABOUT*/
+.page_banner {
+	height: 350px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+.page_banner.about {
+	background-image: url(../images/banner-about.jpg);
+	position: relative;
+}
+.subpage > h3 {
+	font-size: 16px; font-weight: bold; text-transform: uppercase; color:#989898; margin-top: 27px; text-align: center;
+}
+.subpage .content_tt {
+	font-weight: bold; margin: 16px 0 27px;
+}
+.subpage > p {
+	width: 780px; 
+	margin: 0 auto 27px;
+	text-align: center;
+}
 
 /*PORTFOLIO*/
+.page_banner.portfolio {
+	background-image: url(../images/banner-portfolio.png);
+	position: relative;
+}
+
+.page_banner .fancy_box {
+	position: absolute;
+	display: inline-block;    
+    left: 50%;                   /* Move 50% from left */
+    bottom: -27px;                /* Move 10px from bottom */
+    transform: translateX(-50%); /* important! Move button Center position as much as the half of the own size */
+}
+.fancy_box.grey {
+	background: rgba(51,53,56,.9);
+}
+.main_content h3{
+	text-align: center;
+	line-height: 54px;
+}
+
+.subpage .portfolio_nav {
+	width:100%;
+}
+.portfolio_nav .prev_project {
+	float: left;
+}
+.portfolio_nav .next_project {
+	float: right;
+}
+.banner.portfolio_slider .cycle-slide {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+.banner.portfolio_slider .banner_arrows .prev {
+	margin-left: 0; left: 50px;
+}
+.banner.portfolio_slider .banner_arrows .next {
+	margin-right: 0; right: 50px;
+}
