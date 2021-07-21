@@ -7,6 +7,7 @@ font-family: 'Roboto', sans-serif;
 */
 
 /* LAYOUT: Comman CSS */ 
+
 .container {width: 1130px; margin:0 auto;}
 .main_content {
 	width: 1130px; 
@@ -19,11 +20,7 @@ hr {
 	height: 1px; background: #eaeaea;
 	margin: 27px 0;
 }
-@media only screen and (max-width: 1300px) {
-	body {
-		width: 1300px;
-	  }
-  }
+
 /* TYPOGRAPHY */
 body {
 	font: normal 18px/27px 'Open Sans', sans-serif; /*style fontsize/line-heigth fontfamily*/
@@ -71,6 +68,8 @@ s.content_sub_tt{
 	background: #f0ad64;
 	color:#fff;
 }
+ul {margin-bottom: 0;}
+
 /*HEADER*/
 header {
 	background: rgba(0,0,0,.8);
@@ -113,20 +112,28 @@ header {
 	margin-bottom: 41px;
 }
 
-.logo {
-	float: left;
-}
 /*float 
 1. for moving contents and adjusting the width for contents automatically
 2. need always to have parents for clearfix, if not, the heigth of parents is unclear
 .clearfix:after { content:''; display: block; clear:both;}
 */
-nav{
-	float:right;
+
+.main_nav {
+	justify-content: space-between;
 }
 
+.col-md-auto {
+	padding: 0;
+}
+.row .col-md-auto {
+	width: auto;
+}
+
+nav ul  {
+	display:flex;
+	justify-content: flex-end;
+}
 nav ul li {
-	float:left;
 	margin-left: 27px;
 }
 
@@ -141,7 +148,7 @@ nav ul li a {
 	height:54px;
 	background: url(../images/logo.png) no-repeat;
 	text-indent: 9999em;
-	display: block;
+	display: flex;
 }
 .fancy_box {
 	padding:0 42px;
@@ -198,64 +205,44 @@ nav ul li a {
 	padding-bottom: 54px;
 }
 .project_list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	list-style: none;
 }
-
-.project_list li {
-	border: 1px solid #919191;
-	margin-bottom: 80px;
-	box-sizing: border-box;
-	width: 320px;
-	height: 320px;
-	display: flex;
-	padding: 3px;
+.project_list li{
+ margin-bottom:27px;
+	
+	/* 
+	border:3px solid #fff; box-sizing:border-box;
+	box-shadow:0 0 0 1px #919191;
+	*/	
+	/*
+	border:1px solid #919191; box-shadow:inset 0 0 0 3px #fff; box-sizing:border-box; 그림자는 실체가 없으니까 그부분까지 이미지 나온다
+	*/
 }
-li .hover_contents {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-	text-align: center;
-	padding: 50px 0 135px;
-	opacity: 0;
-	transition: opacity 0.4s;
-	background: rgba(0,0,0,.8);
+.project_list li .inner_border{
+	border:1px solid #919191; box-sizing:border-box; padding: 3px;
+	position:relative; height: auto;
 }
-li .hover_contents h4{
-	font-size: 23px;
-	color: #f4af55;
+.project_list li img {
+	width:100%; height:100%;
 }
-li .hover_contents a{
-	font-size: 14px;
-	color: #fff;
-	text-transform: uppercase;
-	font-style: normal;
+/* Alternative with Bootstrap GRID 
+.project_list li:nth-child(3n) {
+	margin-right:0;
 }
-.project_list :hover .hover_contents{ /*space between hover!*/
-	opacity: 1; /*transition opacity*/
+*/
+.project_list li .hover_contents{
+	position:absolute; left:3px; right:3px; top:3px; bottom:3px;
+	height: 100%;
+	background:rgba(0,0,0,.75); padding-top: 81px; text-align:center; opacity:0; transition:opacity 0.4s; 
+}	
+.project_list li .hover_contents h4{
+	font-size:23px; color:#f4af55;
 }
-
-.project_list .project_thumb1 {
-	background: url(../images/portfolio-thumb-1.jpg); 
+.project_list li .hover_contents a{
+	font-size:14px; color:#fff; text-transform:uppercase; font-style:normal;
 }
-.project_list .project_thumb2 {
-	background: url(../images/portfolio-thumb-2.jpg);
-}
-.project_list .project_thumb3 {
-	background: url(../images/portfolio-thumb-3.jpg);
-}
-.project_list .project_thumb4 {
-	background: url(../images/portfolio-thumb-4.jpg);
-}
-.project_list .project_thumb5 {
-	background: url(../images/portfolio-thumb-5.jpg);
-}
-.project_list .project_thumb6{
-	background: url(../images/portfolio-thumb-1.jpg);
-
+.project_list li:hover .hover_contents {
+	opacity:1;
 }
 
 /*media quary 1300width for nev bar an*/
@@ -372,3 +359,32 @@ footer .copy {
 .banner.portfolio_slider .banner_arrows .next {
 	margin-right: 0; right: 50px;
 }
+
+@media screen and (max-width: 1140px) {
+
+	.banner_arrows a {
+		left: 100%;
+	}
+	.banner_arrows .prev {
+		left: 0;
+		margin-left:0;
+		transform: translateX(20px);
+	}
+	.banner_arrows .next {
+		margin-left:0;
+		transform: translateX(-170%);
+	}
+  }
+
+@media screen and (max-width: 770px) {
+	.main_nav {
+		align-items: center;
+		flex-direction: column;
+	}
+	.main_tt {
+		font-size: 7vw;
+	}
+	.slide_contentx p {
+		font-size: 3vw;
+	}
+	}

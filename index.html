@@ -8,7 +8,7 @@
 	<meta name="author" content="Mina">
 	<meta name="viewport" content="width=device-width, inintial-scale=1"/>
 	<meta name="keywords" content="portfolio, theme, bootstrap, grid"> <!--site search keywords in web -->
-	<link rel="stylesheet" href="css/styles.css"/>
+
 	<!-- icons fontawesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
 
@@ -16,22 +16,28 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/malsup/cycle2@2.1.6/build/jquery.cycle2.min.js"></script>
 
+	<!--bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--higher priority, if the stylesheets come after bootstrap-->
+	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 
 <body>
 	<header>
 		<div class="container clearfix">
-	<!--navbar-->
-		<h1 class="logo">
-			<a href="index.html">MinasPortfolio</a> 
-		</h1>
-		<nav>
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li> <!--logo image replacement with text for better searching than just image without text-->
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="about.html">About us</a></li>
-			</ul>
-		</nav>
+	<!--navbar: need to have a parent for grid-->
+			<div class="row main_nav"> 
+				<h1 class="logo col-md-auto">
+					<a href="index.html">MinasPortfolio</a> 
+				</h1>
+				<nav class="col-md-auto">
+					<ul class="clearfix">
+						<li><a href="index.html">Home</a></li> <!--logo image replacement with text for better searching than just image without text-->
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="about.html">About us</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</header>
 
@@ -79,50 +85,59 @@
 	<div class="main_content container">
 		<h3 class="content_tt">Recent Projects</h3>
 		<p class=link><a href="#">See all projects &rarr;</a></p>
-
-		<ui class="project_list">
-			<li>
-				<div class="project_thumb1" alt="portfolio-thumb">
+		<ui class="project_list row">
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-1.jpg" alt="portfolio-thumb"/>
+					<div class="hover_contents">
+							<h4 class="content_tt">This is the project name.</h4>
+							<a href="#">click for details</a>
+					</div>
+				</div>
+			</li>
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-2.jpg" alt="portfolio-thumb"/>
 					<div class="hover_contents">
 						<h4 class="content_tt">This is the project name.</h4>
 						<a href="#">click for details</a>
 					</div>
-				</div> 
-				
-			</li>
-			<li>
-				<div class="project_thumb2" alt="portfolio-thumb">
-				<div class="hover_contents">
-					<h4 class="content_tt">This is the project name.</h4>
-					<a href="#">click for details</a>
 				</div>
 			</li>
-			<li>
-				<div class="project_thumb3" alt="portfolio-thumb">
-				<div class="hover_contents">
-					<h4 class="content_tt">This is the project name.</h4>
-					<a href="#" class="content_sub_tt">click for details</a>
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-3.jpg" alt="portfolio-thumb"/>
+					<div class="hover_contents">
+						<h4 class="content_tt">This is the project name.</h4>
+						<a href="#" class="content_sub_tt">click for details</a>
+					</div>
 				</div>
 			</li>
-			<li>
-				<div class="project_thumb4" alt="portfolio-thumb">
-				<div class="hover_contents">
-					<h4 class="content_tt">This is the project name.</h4>
-					<a href="#" class="content_sub_tt">click for details</a>
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-4.jpg" alt="portfolio-thumb"/>
+					<div class="hover_contents">
+						<h4 class="content_tt">This is the project name.</h4>
+						<a href="#" class="content_sub_tt">click for details</a>
+					</div>
 				</div>
 			</li>
-			<li>
-				<div class="project_thumb5" alt="portfolio-thumb">
-				<div class="hover_contents">
-					<h4 class="content_tt">This is the project name.</h4>
-					<a href="#" class="content_sub_tt">click for details</a>
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-5.jpg" alt="portfolio-thumb"/>
+					<div class="hover_contents">
+						<h4 class="content_tt">This is the project name.</h4>
+						<a href="#" class="content_sub_tt">click for details</a>
+					</div>
 				</div>
 			</li>
-			<li>
-				<div class="project_thumb6" alt="portfolio-thumb">
-				<div class="hover_contents">
-					<h4 class="content_tt">This is the project name.</h4>
-					<a href="#" class="content_sub_tt">click for details</a>
+			<li class="col-md-4 col-sm-12 col-12">
+				<div class="inner_border">
+					<img src="images/portfolio-thumb-1.jpg" alt="portfolio-thumb"/>
+					<div class="hover_contents">
+						<h4 class="content_tt">This is the project name.</h4>
+						<a href="#" class="content_sub_tt">click for details</a>
+					</div>
 				</div>
 			</li>
 		</ui>
